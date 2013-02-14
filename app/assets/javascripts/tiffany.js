@@ -103,7 +103,7 @@ $(document).ready(function(){
 
 		$("#birds").on("click", function(){
 
-			var bird = $("<img src='/assets/beach/pelican.jpg' />");
+			var bird = $("<img src='/assets/beach/pelican-nosedive.png' />");
 			$body.append(bird);
 
 			bird.css({
