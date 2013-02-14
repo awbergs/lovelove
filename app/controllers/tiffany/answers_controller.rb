@@ -1,10 +1,13 @@
 class Tiffany::AnswersController < TiffanyController
 
+  LAST_QUESTION_ID = "5"
+
   ANSWERS = { #question_id : correct_answer
     "1" => "1",
     "2" => "2",
     "3" => "4",
-    "4" => "4"
+    "4" => "4",
+    "5" => "1"
   }
 
   WRONG_ANSWER_TEXTS = [
@@ -36,7 +39,13 @@ class Tiffany::AnswersController < TiffanyController
     end
 
     if ANSWERS[params[:id]] == params[:answer]
-      redirect_to "/tiffany/questions/#{params[:id].to_i + 1}", :notice => get_random_correct_answer_text
+
+      if params[:id] == LAST_QUESTION_ID
+        session[:is_tiffany] = true
+        redirect_to "/tiffany"
+      else
+        redirect_to "/tiffany/questions/#{params[:id].to_i + 1}", :notice => get_random_correct_answer_text
+      end
     else
       redirect_to root_url, :notice => get_random_wrong_answer_text
       return

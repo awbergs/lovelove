@@ -8,7 +8,9 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require bootstrap.min
+ *= require bootstrap-responsive.min
+ *= require jquery-ui-1.10.0.custom.min
  */
 
 
@@ -27,4 +29,17 @@ h1.fadeIn{
 
 .alert{
 	text-align: center;
+}
+
+#beach-animation img{
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+#t-story{
+	z-index:3;position:absolute;background-color:black;opacity:0.7;padding:20px;
+	width: 800px;
+left: 50%;
+margin-left: -400px;
 }

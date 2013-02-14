@@ -9,6 +9,10 @@
 		<script src="../assets/html5shiv.js"></script>
     <![endif]-->
 
+    <link rel="icon" 
+      type="image/jpg" 
+      href="/assets/favicon.jpg">
+
 	<%= csrf_meta_tags %>
 </head>
 <body style="display:none">
@@ -26,10 +30,8 @@
 	<%= yield %>
 	</div>
 
-
-	<%= javascript_include_tag "jquery.min" %>
-	<%= javascript_include_tag "jquery-ui-1.10.0.custom.min" %>
-	<%= javascript_include_tag "bootstrap.min" %>
 	<%= javascript_include_tag "application" %>
+
+	<%= yield :javascripts %>
 </body>
 </html>

@@ -5,7 +5,9 @@ Love::Application.routes.draw do
 
   match "tiffany/questions/:id" => "tiffany/questions#question"
 
-  match "tiffany/answers/:id/:answer" => "tiffany/answers#answer" 
+  match "tiffany/answers/:id/:answer" => "tiffany/answers#answer"
+
+  get "tiffany" => "tiffany#index" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
