@@ -21,8 +21,7 @@ class Tiffany::AnswersController < TiffanyController
 
   CHEATER_TEXTS = [
 
-    "<strong>Ahhh...</strong> We either have someone who's very impatient to prove they are the love of my life, or someone who is using some mental prowess to try to hack the system...<br/><br/>Either way I'm disappointed in you.",
-    ""
+    "<strong>Ahhh...</strong> We either have someone who's very impatient to prove they are the love of my life, or someone who is using some mental prowess to try to hack the system...<br/><br/>Either way I'm disappointed in you."
 
   ]
 

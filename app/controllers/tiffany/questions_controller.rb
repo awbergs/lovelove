@@ -1,4 +1,10 @@
 class Tiffany::QuestionsController < TiffanyController
+
+  HACK_TEXTS = [
+    "Hah! Nice try hacky hackenstein...",
+    "<strong>PLEASE</strong> I'm way more prepared than you think. I will <strong>not</strong> let you cheat the system.",
+    "Wait...who uses the url bar anymore? You must be from 1999."
+  ]
   def question
 
   	question_id = params[:id].to_i
@@ -15,7 +21,7 @@ class Tiffany::QuestionsController < TiffanyController
 
 	  	if referring_question != question_id - 1
 
-	  		redirect_to root_url, :notice => "Hah! Nice try hacky hackenstein..."
+	  		redirect_to root_url, :notice => HACK_TEXTS[rand(HACK_TEXTS.length)]
 
 	  		return
 
