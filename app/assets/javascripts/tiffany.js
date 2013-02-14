@@ -49,6 +49,8 @@ $(document).ready(function(){
 		loadedCount ++;
 
 		if(loadedCount >= imageUrls.length){
+
+			$("#wait").fadeOut("fast");
 			startAnimation();
 		}
 
